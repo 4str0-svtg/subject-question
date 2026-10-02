@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subject Question</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f5f5f5;
+  }
+  .box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
+    width: min(90%, 400px);
+  }
+  input {
+    padding: 10px;
+    width: 80%;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  #result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h2>What subject do you like?</h2>
+    <input id="subject" type="text" placeholder="Type your answer">
+    <br>
+    <button onclick="checkSubject()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+<script>
+function checkSubject() {
+  const subject = document.getElementById("subject").value.trim().toLowerCase();
+  const result = document.getElementById("result");
+
+  if (subject === "science") {
+    result.textContent = "You're a nerd 😂";
+  } else {
+    result.textContent = "You're normal";
+  }
+}
+</script>
+</body>
+</html>
